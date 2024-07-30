@@ -1,0 +1,15 @@
+*.v2
+*.pdb
+*.dll
+*.cache
+*.txt
+*.dll
+*.config
+*.cache
+*.vsidx
+*obj
+/obj
+/bin
+*bin
+/.vs
+*.exe
