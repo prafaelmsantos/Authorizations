@@ -1,0 +1,22 @@
+version: '3.4'
+
+networks:
+  authorizations.api:
+
+services:
+  authorizations.api:
+    container_name: authorizations.api
+    image: ${DOCKER_REGISTRY-}authorizationsapi
+    build:
+      context: .
+      dockerfile: src/API/Authorizations.API/Dockerfile
+    ports:
+      - 5030:80
+      - 5031:441
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80;
+      - GRPCCLIENT_NOTIFICATIONS_URL=http://host.docker.internal:9010
+      - CONNECTION_STRINGS=host=postgres;port=5432;Database=authorizations;User ID=sa;Password=password@12345#;Include Error Detail=true
+    restart: always
+    networks:
+      - authorizations.api
