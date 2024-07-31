@@ -10,10 +10,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMoreira.Base.Lib" Version="1.0.0" />
     <PackageReference Include="coverlet.collector" Version="3.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+	<PackageReference Include="Bogus" Version="35.5.0" />
+	<PackageReference Include="CleanMoq" Version="1.0.0" />
+	<PackageReference Include="FluentAssertions" Version="6.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Authorizations.Core\Authorizations.Core.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Authorizations.Persistence\Authorizations.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

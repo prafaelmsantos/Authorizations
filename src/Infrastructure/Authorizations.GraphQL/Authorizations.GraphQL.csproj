@@ -1,9 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="AutoMoreira.Base.Lib" Version="1.0.0" />
+	<PackageReference Include="HotChocolate" Version="12.12.1" />
+	<PackageReference Include="HotChocolate.AspNetCore" Version="12.12.1" />
+	<PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Authorizations.Core\Authorizations.Core.csproj" />
+    <ProjectReference Include="..\Authorizations.Persistence\Authorizations.Persistence.csproj" />
+  </ItemGroup>
 
 </Project>

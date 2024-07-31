@@ -1,0 +1,14 @@
+﻿global using Authorizations.Core.DTO;
+global using Authorizations.Persistence.Context;
+global using Authorizations.Persistence.Interfaces.Services;
+global using AutoMoreira.Base.Lib.Grpc.Notifications.ServicesRegistry;
+global using HotChocolate.AspNetCore;
+global using HotChocolate.AspNetCore.Playground;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Versioning;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
+global using System.Text;
+global using System.Text.Json.Serialization;
