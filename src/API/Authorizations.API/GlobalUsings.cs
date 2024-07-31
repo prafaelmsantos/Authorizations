@@ -1,6 +1,8 @@
 ﻿global using Authorizations.Core.DTO;
+global using Authorizations.GraphQL.ServicesRegistry;
 global using Authorizations.Persistence.Context;
 global using Authorizations.Persistence.Interfaces.Services;
+global using Authorizations.Persistence.ServicesRegistry;
 global using AutoMoreira.Base.Lib.Grpc.Notifications.ServicesRegistry;
 global using HotChocolate.AspNetCore;
 global using HotChocolate.AspNetCore.Playground;

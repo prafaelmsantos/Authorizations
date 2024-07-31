@@ -1,6 +1,7 @@
 ﻿namespace Authorizations.API.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0", Deprecated = false)]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class RolesController : ControllerBase
     {

@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Authorizations.GraphQL\Authorizations.GraphQL.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Authorizations.Persistence\Authorizations.Persistence.csproj" />
   </ItemGroup>
 
