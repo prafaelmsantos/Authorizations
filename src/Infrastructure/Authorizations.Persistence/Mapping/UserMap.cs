@@ -38,15 +38,15 @@
 
             entity.Property(x => x.PasswordHash)
                .HasColumnName("password_hash")
-               .IsRequired(true);
+               .IsRequired(false);
 
             entity.Property(x => x.SecurityStamp)
                .HasColumnName("security_stamp")
-               .IsRequired(true);
+               .IsRequired(false);
 
             entity.Property(x => x.ConcurrencyStamp)
                .HasColumnName("concurrency_stamp")
-               .IsRequired(true);
+               .IsRequired(false);
 
             entity.Property(x => x.PhoneNumber)
                .HasColumnName("phone_number")

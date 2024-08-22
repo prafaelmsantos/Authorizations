@@ -71,7 +71,7 @@ namespace Authorizations.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            ConcurrencyStamp = "67aae622-4b19-414c-a7e5-e45c96a5fccf",
+                            ConcurrencyStamp = "51abeb16-3b7e-47e2-a91f-e35a09ea2cd7",
                             IsDefault = true,
                             IsReadOnly = true,
                             Name = "Administrador",
@@ -80,7 +80,7 @@ namespace Authorizations.Persistence.Migrations
                         new
                         {
                             Id = 2L,
-                            ConcurrencyStamp = "c2d88d31-af8a-4390-8b66-88378a3e6c74",
+                            ConcurrencyStamp = "04417e0b-1292-4d98-adeb-d348e0280141",
                             IsDefault = true,
                             IsReadOnly = false,
                             Name = "Colaborador",
@@ -89,7 +89,7 @@ namespace Authorizations.Persistence.Migrations
                         new
                         {
                             Id = 3L,
-                            ConcurrencyStamp = "2adc560d-832a-4046-baa7-e374114a0c5e",
+                            ConcurrencyStamp = "d8cda4c3-f387-4a20-8c2c-a955a7d0454a",
                             IsDefault = false,
                             IsReadOnly = false,
                             Name = "Comercial",
@@ -112,7 +112,6 @@ namespace Authorizations.Persistence.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("concurrency_stamp");
 
@@ -175,7 +174,6 @@ namespace Authorizations.Persistence.Migrations
                         .HasColumnName("normalized_user_name");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("password_hash");
 
@@ -191,7 +189,6 @@ namespace Authorizations.Persistence.Migrations
                         .HasColumnName("phone_number_confirmed");
 
                     b.Property<string>("SecurityStamp")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("security_stamp");
 
@@ -223,7 +220,7 @@ namespace Authorizations.Persistence.Migrations
                         {
                             Id = 1L,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "20543d75-2b51-44a0-baf0-0e1cd3c33f89",
+                            ConcurrencyStamp = "7331bd39-c5e0-4cc1-b14a-5b30724d275e",
                             DarkMode = false,
                             Email = "automoreiraportugal@gmail.com",
                             EmailConfirmed = true,
@@ -233,10 +230,8 @@ namespace Authorizations.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "AUTOMOREIRAPORTUGAL@GMAIL.COM",
                             NormalizedUserName = "AUTOMOREIRAPORTUGAL@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJPALVQViv+xnNb43uCP5STTZ/Wq2pTikXB2p0pkbl147j6fCQz/0lOePYfu2WlY4g==",
                             PhoneNumber = "231472555",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "1b660ce9-d68d-4ec2-8e16-6676bf296b10",
                             TwoFactorEnabled = false,
                             UserName = "automoreiraportugal@gmail.com"
                         });

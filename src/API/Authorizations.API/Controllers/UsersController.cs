@@ -22,9 +22,7 @@
 
         #region CRUD Methods
 
-        /// <summary>
-        /// Get All Users
-        /// </summary>
+        /// <summary> Get All Users </summary>
         [HttpGet()]
         [Consumes("application/json")]
         [Produces("application/json")]
@@ -41,9 +39,7 @@
         }
 
 
-        /// <summary>
-        /// Get User
-        /// </summary>
+        /// <summary> Get User </summary>
         /// <param name="id"></param>
         [HttpGet("{id}")]
         [Consumes("application/json")]
@@ -60,10 +56,7 @@
             }
         }
 
-
-        /// <summary>
-        /// Create User
-        /// </summary>
+        /// <summary> Create User </summary>
         /// <param name="userDTO"></param>
         [HttpPost()]
         [Consumes("application/json")]
@@ -81,10 +74,7 @@
             }
         }
 
-
-        /// <summary>
-        /// Login User
-        /// </summary>
+        /// <summary> Login User </summary>
         /// <param name="userLoginDTO"></param>
         [HttpPost("Login")]
         [Consumes("application/json")]
@@ -110,12 +100,9 @@
             }
         }
 
-
-        /// <summary>
-        /// Reset User Password
-        /// </summary>
+        /// <summary> Reset User Password </summary>
         /// <param name="email"></param>
-        [HttpPost("ResetPassword/{email}")]
+        [HttpPut("ResetPassword/{email}")]
         [Consumes("application/json")]
         [Produces("application/json")]
         public async Task<IActionResult> ResetPassword([FromRoute] string email)
@@ -130,10 +117,7 @@
             }
         }
 
-
-        /// <summary>
-        /// Update User Password
-        /// </summary>
+        /// <summary> Update User Password </summary>
         /// <param name="userLoginDTO"></param>
         [HttpPut("UpdatePassword")]
         [Consumes("application/json")]
@@ -150,10 +134,7 @@
             }
         }
 
-
-        /// <summary>
-        /// Update User
-        /// </summary>
+        /// <summary> Update User </summary>
         /// <param name="userDTO"></param>
         /// <param name="id"></param>
         [HttpPut("{id}")]
@@ -172,10 +153,7 @@
             }
         }
 
-
-        /// <summary>
-        /// Update User Mode
-        /// </summary>
+        /// <summary> Update User Mode </summary>
         /// <param name="mode"></param>
         /// <param name="id"></param>
         [HttpPut("Mode/{id}")]
@@ -193,10 +171,7 @@
             }
         }
 
-
-        /// <summary>
-        /// Update User Image
-        /// </summary>
+        /// <summary> Update User Image </summary>
         /// <param name="image"></param>
         /// <param name="id"></param>
         [HttpPut("Image/{id}")]
@@ -214,10 +189,7 @@
             }
         }
 
-
-        //// <summary>
-        /// Delete Users
-        /// </summary>
+        //// <summary> Delete Users </summary>
         /// <param name="usersIds"></param>
         [HttpPost("Delete")]
         [Consumes("application/json")]

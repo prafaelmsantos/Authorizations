@@ -43,9 +43,9 @@ namespace Authorizations.Persistence.Migrations
                     email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: false),
                     normalized_email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     email_confirmed = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
-                    password_hash = table.Column<string>(type: "text", nullable: false),
-                    security_stamp = table.Column<string>(type: "text", nullable: false),
-                    concurrency_stamp = table.Column<string>(type: "text", nullable: false),
+                    password_hash = table.Column<string>(type: "text", nullable: true),
+                    security_stamp = table.Column<string>(type: "text", nullable: true),
+                    concurrency_stamp = table.Column<string>(type: "text", nullable: true),
                     phone_number = table.Column<string>(type: "text", nullable: false),
                     phone_number_confirmed = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
                     two_factor_enabled = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
@@ -167,22 +167,22 @@ namespace Authorizations.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "roles",
                 columns: new[] { "id", "concurrency_stamp", "is_default", "is_read_only", "name", "normalized_name" },
-                values: new object[] { 1L, "67aae622-4b19-414c-a7e5-e45c96a5fccf", true, true, "Administrador", "ADMINISTRADOR" });
+                values: new object[] { 1L, "51abeb16-3b7e-47e2-a91f-e35a09ea2cd7", true, true, "Administrador", "ADMINISTRADOR" });
 
             migrationBuilder.InsertData(
                 table: "roles",
                 columns: new[] { "id", "concurrency_stamp", "is_default", "name", "normalized_name" },
-                values: new object[] { 2L, "c2d88d31-af8a-4390-8b66-88378a3e6c74", true, "Colaborador", "COLABORADOR" });
+                values: new object[] { 2L, "04417e0b-1292-4d98-adeb-d348e0280141", true, "Colaborador", "COLABORADOR" });
 
             migrationBuilder.InsertData(
                 table: "roles",
                 columns: new[] { "id", "concurrency_stamp", "name", "normalized_name" },
-                values: new object[] { 3L, "2adc560d-832a-4046-baa7-e374114a0c5e", "Comercial", "COMERCIAL" });
+                values: new object[] { 3L, "d8cda4c3-f387-4a20-8c2c-a955a7d0454a", "Comercial", "COMERCIAL" });
 
             migrationBuilder.InsertData(
                 table: "users",
                 columns: new[] { "id", "access_failed_count", "concurrency_stamp", "email", "email_confirmed", "first_name", "image", "is_default", "last_name", "lockout_end", "normalized_email", "normalized_user_name", "password_hash", "phone_number", "phone_number_confirmed", "security_stamp", "user_name" },
-                values: new object[] { 1L, 0, "20543d75-2b51-44a0-baf0-0e1cd3c33f89", "automoreiraportugal@gmail.com", true, "Auto", null, true, "Moreira", null, "AUTOMOREIRAPORTUGAL@GMAIL.COM", "AUTOMOREIRAPORTUGAL@GMAIL.COM", "AQAAAAEAACcQAAAAEJPALVQViv+xnNb43uCP5STTZ/Wq2pTikXB2p0pkbl147j6fCQz/0lOePYfu2WlY4g==", "231472555", true, "1b660ce9-d68d-4ec2-8e16-6676bf296b10", "automoreiraportugal@gmail.com" });
+                values: new object[] { 1L, 0, "7331bd39-c5e0-4cc1-b14a-5b30724d275e", "automoreiraportugal@gmail.com", true, "Auto", null, true, "Moreira", null, "AUTOMOREIRAPORTUGAL@GMAIL.COM", "AUTOMOREIRAPORTUGAL@GMAIL.COM", null, "231472555", true, null, "automoreiraportugal@gmail.com" });
 
             migrationBuilder.InsertData(
                 table: "user_roles",
