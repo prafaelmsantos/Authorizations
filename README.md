@@ -1,5 +1,5 @@
 # Authorizations
-.NET Core, EF Core, gRPC, PostgreSQL, GraphQL, Docker and Xunit (Bogus, Moq and Fluent Assertions)
+.NET Core, EF Core, PostgreSQL, GraphQL, Docker, Xunit (Bogus, Moq and FluentAssertions) and CI/CD GitHub Actions.
 
 # Author
 Pedro Rafael Moreira dos Santos
